@@ -1,0 +1,25 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.row > div {
+    flex: 1 1 0;
+    border: 1px solid black;
+}
+
+.square {
+    aspect-ratio: 1 / 1;
+}
