@@ -23,3 +23,7 @@
 .square {
     aspect-ratio: 1 / 1;
 }
+
+.highlight {
+    background-color: black;
+}
