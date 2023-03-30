@@ -2,32 +2,37 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+.container, .grid, .row {
+    display: flex;
+}
+
+.container {
+    flex-direction: column;
+    height: 85vh;
+    margin: auto;
+    align-items: center;
+}
+
+button {
+    flex: 0 1 auto;
+    padding: 4px 10px;
+}
+
+.grid, .row, .row > div {
+    flex: 1 1 0;
 }
 
 .grid {
-    display: flex;
     flex-direction: column;
-    height: 100vh;
-}
-
-.row {
-    display: flex;
-    flex: 1 1 0;
 }
 
 .row > div {
-    flex: 1 1 0;
     border: 1px solid black;
 }
 
 .square {
     aspect-ratio: 1 / 1;
-}
-
-.highlight {
-    background-color: yellow;
-}
-
-.paint {
-    background-color: black;
 }

@@ -1,5 +1,5 @@
 const INITIAL_GRID_SIZE = 16; 
-const body = document.querySelector('body');
+const conatiner = document.querySelector('.container');
 const button = document.querySelector('button');
 
 generateGrid(INITIAL_GRID_SIZE);
@@ -27,15 +27,16 @@ function paintDiv() {
 }
 
 function generateGrid(size) {
+    while (true) {
+        if (!isNaN(+size) && size > 0 && size <= 100) break;
+        size = prompt('What size?');
+    }
+    
     let grid = document.querySelector('.grid');
     if (grid !== null) grid.remove();
     grid = document.createElement('div');
     grid.classList.add('grid', 'square');
-    body.appendChild(grid);
-    
-    while (typeof size !== 'number') {
-        size = prompt('What size?');
-    }
+    conatiner.appendChild(grid);
     
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
