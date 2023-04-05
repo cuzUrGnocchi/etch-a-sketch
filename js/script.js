@@ -29,7 +29,7 @@ function paintDiv() {
 function generateGrid(size) {
     while (true) {
         if (!isNaN(+size) && size > 0 && size <= 100) break;
-        size = prompt('What size?');
+        size = prompt('Size of the new grid:');
     }
     
     let grid = document.querySelector('.grid');
